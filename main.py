@@ -114,7 +114,7 @@ def receive_sensor_data(packet: SensorPacket):
     buffer = io.BytesIO()
     img.save(buffer, format="PNG")
     img.save("qr_code.png",format="PNG")
-    qrLink = f"http://10.145.54.158:8000/qr-code/{device_id}/{timestamp}"
+    qrLink = f"https://pesticideresiduedetection-1.onrender.com/qr-code/{device_id}/{timestamp}"
 
     return {
         "message": "Data verified and stored successfully",
